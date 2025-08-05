@@ -32,36 +32,51 @@
         font-weight: bold;
       }
       .hero {
-        position: relative;
-        width: 100%;
-      }
-      .hero img {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
-      .hero-text {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.4);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: white;
-      }
-      .hero-text h1 {
-        font-size: 40px;
-        margin: 0;
-      }
-      .hero-text p {
-        font-size: 20px;
-        margin: 10px 0 0;
-      }
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* default */
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hero-img {
+    object-fit: contain; /* 📱 phone par poori image dikhegi */
+  }
+}
+
+.hero-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.hero-text p {
+  font-size: 20px;
+  margin: 10px 0 0;
+}
+
 
       /* 🌟 Services Section with Shape */
       #services {
@@ -86,15 +101,17 @@
       #services p {
         text-align: center;
         color: white;
-        margin-bottom: 20px;
+        margin-bottom: 16px;
       }
 
       .services-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
-        padding: 20px;
-      }
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* ✅ 2 columns har row me */
+  gap: 40px;
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
 
       .card {
   background-color: #1f1f1f;
@@ -188,22 +205,30 @@
       }
 
       footer {
-        background-color: #2f2b2b;
-        text-align: center;
-        padding: 20px;
-        font-size: 14px;
-      }
-@media (max-width: 768px) {
+  background-color: #2f2b2b;
+  text-align: center;
+  padding: 20px;
+  font-size: 10px; /* Isko chhota karo, jaise 12px */
+}
+
+footer p {
+  font-size: 12px; /* 👈 Yeh line important hai */
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 800px) {
   .services-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 10px;
+    gap: 30px;
+    padding: 20px;
   }
+}
 
   .card {
     height: auto; /* Allow it to adjust automatically */
   }
-}
+
 
       /* ✨ Wobble Animation */
       <style>
@@ -252,12 +277,11 @@
 }
 </style>
 
-}
     </style>
   </head>
   <body>
     <header>
-      <h2>GOPAL KHANDELWAL & Associated</h2>
+      <h2>SHREE GOPAL KHANDELWAL</h2>
       <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -268,19 +292,19 @@
 
     <!-- 👨‍💼 Hero Image with Text -->
     <div class="hero" id="home">
-      <img src="daddy.24.JPG" alt="Office Background" />
-      <div class="hero-text">
-        <h1>GOPAL KHANDELWAL & Associated</h1>
-        <p>📞 +91 9881940206 <br />25+ Years Experience</p>
-      </div>
-    </div>
+  <img src="daddy.24.JPG" alt="Office Background" class="hero-img" />
+  <div class="hero-text">
+    <h1>GOPAL KHANDELWAL & Associated</h1>
+    <p>📞 +91 9881940206 <br />25+ Years Experience</p>
+  </div>
+</div>
 
     <!-- 📂 Our Services -->
     <section id="services">
       <div class="services-bg-shape"></div>
-      <h2>📂 Our Services</h2>
+      <h2>📂 Our Services</h2><br/>
       <p>
-        Accounting Tax Basic | GST New Number Registration | Income Tax Return |
+        Accounting Tax Basic | GST New Number Registration | <br/>Income Tax Return |
         Udyam Certificates | B/Sheet Bank Purpose | Project Report | GST Return
         | PAN card
       </p>
@@ -330,12 +354,12 @@
     </section>
 
     <!-- ABOUT SECTION -->
-    <section id="about" style="background-color: #484343; padding: 100px 0">
+    <section id="about" style="background-color: #484343; padding: 40px 0;"></section>
       <div
         style="
           position: relative;
           width: 900px;
-          height: 900px;
+          height: 700px;
           margin: 0 auto;
           background-color: #1f1f1f;
           border-radius: 35% 25% 45% 45% / 60% 40% 50% 45%;
@@ -347,19 +371,21 @@
         "
       >
         <!-- ✅ TEXT INSIDE SHAPE ✅ -->
-        <div style="color: white; text-align: center; max-width: 600px">
-          <h2 style="font-size: 28px">📝 About Us</h2>
-          <br />
-          <h3 style="margin-bottom: 10px">GOPAL KHANDELWAL & Associates</h3>
-          <p style="line-height: 1.7; font-size: 16px">
+        <div style="color: white; text-align: center; max-width: 700px">
+          <h2 style="text-align: center; color: white; font-size: 38px; margin-bottom: -10px;">
+  📝 About Us
+</h2>
+          <br /><br />
+          <h3 style="margin-bottom: 20px">GOPAL KHANDELWAL & Associates</h3><br />
+          <p style="line-height: 1.8; font-size: 16px; text-align: center;">
             👨‍💼 <strong>25+ Years of Trusted Experience</strong><br />
 With over 25 years of hands-on experience, Gopal Khandelwal & Associates has been a reliable name in the field of accounting, taxation, and financial documentation.
 Our journey started with a small step driven by the goal to simplify complex paperwork for people. Today, we proudly serve individuals, families, and businesses with complete transparency, dedication, and personal guidance.
 We specialize in: GST registration & return filing , Income tax services , Loan & banking documentation , Project reports, investment details, and much more
 Our mission is simple — to make your paperwork stress-free and trustworthy.<br /><br />
             Our mission is simple — to make your paperwork stress-free and
-            trustworthy. 📍<br />
-            <strong>Based in Chikhali, Maharashtra</strong>
+            trustworthy. <br />
+            <strong>📍Based in Chikhali, Maharashtra</strong>
           </p>
         </div>
       </div>
@@ -402,7 +428,7 @@ Our mission is simple — to make your paperwork stress-free and trustworthy.<br
             box-sizing: border-box;
           "
         >
-          <h2 style="margin-top: 0; color: #00ffe7">Why Choose Us?</h2>
+          <h2 style="margin-top: 0; color: #00ffe7; font-size: 36px;">Why Choose Us?</h2>
           <ul
             style="
               list-style: none;
@@ -457,8 +483,8 @@ Our mission is simple — to make your paperwork stress-free and trustworthy.<br
     background-color: #1f1f1f;
     color: white;
     padding: 20px;
-    border-radius: 12px;
-    width: 250px;
+    border-radius: 15px;
+    width: 400px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     animation: gentleWobble 2.8s ease-in-out infinite;
@@ -478,7 +504,7 @@ Our mission is simple — to make your paperwork stress-free and trustworthy.<br
 >
   <!-- Headings -->
   <div style="text-align: center">
-    <h2 style="margin-bottom: 10px">📞 Contact Us</h2>
+    <h2 style="margin-bottom: 12px">📞 Contact Us</h2><br/>
     <p style="font-style: italic; font-size: 15px">
       "We're just a call away — here to simplify your work."
     </p>
@@ -638,7 +664,7 @@ Our mission is simple — to make your paperwork stress-free and trustworthy.<br
     event.preventDefault();
     document.getElementById("thankYouMessage").style.display = "block";
     document.getElementById("contactForm").reset();
-    setTimeout(() => {
+    setTimeout(() => 
       document.getElementById("thankYouMessage").style.display = "none";
     }, 5000);
   }
