@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <title>Shree Tax Consultancy</title>
     <style>
-  html {
+      html {
         scroll-behavior: smooth;
       }
-  body {
+      body {
         font-family: "Segoe UI", sans-serif;
         margin: 0;
         padding: 0;
         color: #ffffff;
         background-color: #484343;
       }
-  header {
+      header {
         position: sticky;
         top: 0;
         z-index: 1000;
@@ -22,81 +22,74 @@
         color: white;
         display: flex;
         justify-content: space-between;
-        justify-items: right;
         align-items: center;
-        padding: 50px 60px;
+        padding: 35px 40px;
       }
-  nav a {
-  color: white;
-  margin: 0 5px;
-  text-decoration: none;
-  text-align: left;
-  font-weight: bold;
-  font-size: 28px; /* ✅ Size increase kiya */
+      nav a {
+        color: white;
+        margin: 0 12px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 30px;
+      }
+      .hero {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
 }
-  .hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+      .hero-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* default */
+        display: block;
 }
-
-.hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* default */
-  display: block;
-}
-
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
   .hero-img {
     object-fit: contain; /* 📱 phone par poori image dikhegi */
   }
 }
 
-.hero-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  padding: 20px;
+      .hero-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        padding: 20px;
+}
+      .hero-text h1 {
+        font-size: 55px;
+        margin: 0;
+}
+      .hero-text p {
+        font-size: 30px;
+        margin: 10px 0 0;
 }
 
-.hero-text h1 {
-  font-size: 50px;
-  margin: 0;
-}
-
-.hero-text p {
-  font-size: 30px;
-  margin: 15px 0 0;
-}
-
-      /* 🌟 Services Section with Shape */
+      /* Services Section with Shape */
       #services {
         position: relative;
-        padding: 100px 80px 20px;
+        padding: 80px 20px 60px;
         background-color: transparent;
         z-index: 1;
-        font-size: 32px;
       }
 
-      #services-shape-bg {
+      #services .shape-bg {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         background-color: #1f1f1f;
-        border-radius: 100px / 90px;
+        border-radius: 100px / 80px;
         z-index: -1;
       }
 
@@ -104,42 +97,40 @@
       #services p {
         text-align: center;
         color: white;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
+        font-size: 24px;
       }
 
-    .services-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* ✅ 2 columns har row me */
-  gap: 40px;
-  padding: 20px;
-  max-width: 1000px;
-  margin: auto;
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* ✅ 2 columns har row me */
+        gap: 30px;
+        height: 900px;
+        padding: 20px;
+        max-width: 1000px;
+        margin: auto;
+        font-size: 26px;
 }
-
-  .card {
-  background-color: #1f1f1f;
-  color: white;
-  padding: 80px;
-  border-radius: 50px;
-  height: 230px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  font-size: 30px;
-  width: 200px;
+      .card {
+        background-color: #1f1f1f;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        height: 230px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
 }
-
-.card:hover,
-.card:active {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(100, 150, 200, 0.4); /* grey-blue glow */
+      .card:hover,
+      .card:active {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(100, 150, 200, 0.4); /* grey-blue glow */
 }
-
-      /* 📝 About Us */ 
+  /* 📝 About Us */ 
       #about {
         position: relative;
         padding: 100px 20px;
@@ -180,7 +171,7 @@
 
       /* 📞 Contact Us */
       #contact {
-        padding: 80px 20px;
+        padding: 60px 20px;
         background-color: #1f1f1f;
         color: white;
         text-align: center;
@@ -195,33 +186,31 @@
       form textarea {
         width: 100%;
         padding: 12px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         border-radius: 6px;
         border: none;
-        font-size: 26px;
       }
 
       form button {
         background-color: #444;
         color: white;
         border: none;
-        padding: 20px 100px;
+        padding: 12px 25px;
         border-radius: 6px;
         cursor: pointer;
-        font-size: 30px;
       }
 
-    footer {
-  background-color: #2f2b2b;
-  text-align: center;
-  padding: 20px;
-  font-size: 14px; /* Isko chhota karo, jaise 12px */
+      footer {
+        background-color: #2f2b2b;
+        text-align: center;
+        padding: 20px;
+        font-size: 20px;
 }
 
-footer p {
-  font-size: 10px; /* 👈 Yeh line important hai */
-  margin: 0;
-  line-height: 1.5;
+      footer p {
+        font-size: 10px; /*My Name */
+        margin: 0;
+        line-height: 1.5;
 }
 
 @media (max-width: 800px) {
@@ -230,15 +219,14 @@ footer p {
     gap: 30px;
     padding: 20px;
   }
-  
 }
 
   .card {
     height: auto; /* Allow it to adjust automatically */
   }
 
-      /* ✨ Wobble Animation */
-      <style>
+/* ✨ Wobble Animation */
+  <style>
 @keyframes wobbleOnce {
   0% {
     transform: translateX(0);
@@ -272,25 +260,20 @@ footer p {
 
 .contact-box {
   background-color: #1f1f1f;
-  width: 850px;
-  height: 300px;
-  font-size: 30px;
   color: white;
-  padding: 80px;
-  border-radius: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  width: 350px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   animation: wobbleOnce 1.5s ease;
   margin-bottom: 20px;
-  margin-left: 80px;
   transition: background-color 0.3s ease;
-  word-break: break-word;
-
+  font-size: 20px;
 }
 </style>
-</style>
-  
-</head>
+ </style>
+  </head>
   <body>
     <header>
       <h2>SHREE GOPAL KHANDELWAL</h2>
@@ -304,7 +287,7 @@ footer p {
 
     <!-- 👨‍💼 Hero Image with Text -->
     <div class="hero" id="home">
-  <img src="daddy.24.JPG" alt="Office Background" class="hero-img" />
+  <img src="daddy.26.JPG" alt="Office Background" class="hero-img" />
   <div class="hero-text">
     <h1>GOPAL KHANDELWAL & Associated</h1>
     <p>📞 +91 9881940206 <br />25+ Years Experience</p>
@@ -360,9 +343,7 @@ footer p {
     <!-- SERVICES SECTION -->
     <section
       id="services"
-      style="background-color: #484343; color: white; padding: 60px 20px 30px"
-    >
-      <!-- Existing code -->
+      style="background-color: #484343; color: white; padding: 60px 20px 30px">
     </section>
 
     <!-- ABOUT SECTION -->
@@ -380,16 +361,18 @@ footer p {
           justify-content: center;
           padding: 50px;
           box-sizing: border-box;
+          font-size: 20px;
         "
       >
         <!-- ✅ TEXT INSIDE SHAPE ✅ -->
         <div style="color: white; text-align: center; max-width: 600px">
-          <h2 style="font-size: 46px; margin-top: -20px;">📝 About Us</h2>
-          <h3 style="margin-bottom: 12px">GOPAL KHANDELWAL & Associates</h3>
+          <h2 style="font-size: 48px; margin-top: -20px;">📝 About Us</h2>
+          
+          <h3 style="margin-bottom: 10px">GOPAL KHANDELWAL & Associates</h3>
           <p style="line-height: 1.8; font-size: 30px; text-align: center;">
             👨‍💼 <strong>25+ Years of Trusted Experience</strong><br />
 With over 25 years of hands-on experience, Gopal Khandelwal & Associates has been a reliable name in the field of accounting, taxation, and financial documentation.
-Our journey started with a small step driven by the goal to simplify complex paperwork for people. Today, we proudly serve individuals, families, and businesses with complete transparency, dedication, and personal guidance.
+<br />Our journey started with a small step driven by the goal to simplify complex paperwork for people. Today, we proudly serve individuals, families, and businesses with complete transparency, dedication, and personal guidance.
 We specialize in: GST registration & return filing , Income tax services , Loan & banking documentation , Project reports, investment details, and much more
 Our mission is simple — to make your paperwork stress-free and trustworthy.<br /><br />
             Our mission is simple — to make your paperwork stress-free and
@@ -406,39 +389,56 @@ Our mission is simple — to make your paperwork stress-free and trustworthy.<br
       style="background-color: #484343; padding: 80px 20px"
     >
       <div
-  style="
-    max-width: 700px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-    text-align: left;
-    padding: 90px;
-    background-color: #1f1f1f;
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  "
->
+        style="
+          max-width: 1100px;
+          margin: 0 auto;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: stretch;
+          overflow: hidden;
+          border-radius: 20px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+          
+        "
+      >
         <!-- LEFT SIDE IMAGE -->
-        <!-- Upar image -->
-<img
-  src="daddy.25.JPG"
-  alt="Why Choose Us"
-  style="width: 100%; border-radius: 18px"
-/>
+        <div style="flex: 1 1 50%; min-width: 500px">
+          <img
+            src="daddy.25.JPG"
+            alt="Why Choose Us"
+            style="width: 100%; height: 100%; object-fit: cover; display: block"
+          />
+        </div>
 
-<!-- Niche content -->
-<div style="color: white;">
-  <h2 style="color: #00ffe7; font-size: 32px; text-align: center;">Why Choose Us?</h2>
-  <ul style="list-style: none; padding: 0; font-size: 30px; line-height: 1.8; t\">
-    <li>✅ <strong>25+ Years Experience</strong> in Accounting & Tax.</li>
-    <li>✅ <strong>Quick & Reliable</strong> Document Solutions.</li>
-    <li>✅ <strong>1-on-1 Guidance</strong> for every client.</li>
-    <li>✅ <strong>Affordable & Transparent</strong> Pricing.</li>
-    <li>✅ <strong>Available on Call & WhatsApp</strong> 24/7.</li>
-  </ul>
-</div>
+        <!-- RIGHT SIDE BOX -->
+        <div
+          style="
+            flex: 1 1 50%;
+            min-width: 300px;
+            background-color: #1f1f1f;
+            color: white;
+            padding: 40px;
+            box-sizing: border-box;
+          "
+        >
+          <h2 style="margin-top: 0; color: #00ffe7; font-size: 36px;">Why Choose Us?</h2>
+          <ul
+            style="
+              list-style: none;
+              padding-left: 0;
+              font-size: 25px;
+              line-height: 1.8;
+            "
+          >
+            <li>
+              ✅ <strong>25+ Years Experience</strong> in Accounting & Tax.
+            </li>
+            <li>✅ <strong>Quick & Reliable</strong> Document Solutions.</li>
+            <li>✅ <strong>1-on-1 Guidance</strong> for every client.</li>
+            <li>✅ <strong>Affordable & Transparent</strong> Pricing.</li>
+            <li>✅ <strong>Available on Call & WhatsApp</strong> 24/7.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -473,18 +473,26 @@ Our mission is simple — to make your paperwork stress-free and trustworthy.<br
   }
 
   .contact-box {
-    background-color: #1f1f1f;
-    color: white;
-    padding: 20px;
-    border-radius: 12px;
-    width: 320px;
-    height: 300px;
-    font-size: 30px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    animation: gentleWobble 2.8s ease-in-out infinite;
-    transition: background-color 0.4s ease;
-  }
+  background-color: #1f1f1f;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 355px; /* ✅ थोड़ा बड़ा और flexible width */
+  max-width: 90%; /* ✅ responsive banane ke liye */
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: gentleWobble 2.8s ease-in-out infinite;
+  transition: background-color 0.4s ease;
+  font-size: 25px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.contact-box p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-size: 28px;
+}
 </style>
 
  <!-- 📞 CONTACT US SECTION -->
@@ -546,14 +554,13 @@ Our mission is simple — to make your paperwork stress-free and trustworthy.<br
 
     <div class="contact-box">
       <h4>✉️ Email</h4>
-      <p style="word-break: break-word;">
-  <a
-    href="mailto:gopalkhandelwal77@rediffmail.com"
-    style="color: #ffaa33; text-decoration: none; word-break: break-word;"
-  >
-    gopalkhandelwal77@rediffmail.com
-  </a>
-</p>
+      <p>
+        <a
+          href="mailto:gopalkhandelwal77@rediffmail.com"
+          style="color: #ffaa33; text-decoration: none"
+          >gopalkhandelwal77@rediffmail.com</a
+        >
+      </p>
     </div>
   </div>
 
@@ -564,29 +571,25 @@ Our mission is simple — to make your paperwork stress-free and trustworthy.<br
       flex-wrap: wrap;
       gap: 40px;
       justify-content: center;
-      max-width: 1300px;
+      max-width: 1100px;
       margin: auto;
     "
   >
     <!-- Contact Form -->
     <div
-  style="
-    flex: 2 1 750px;
-    background: #1f1f1f;
-    padding: 90px 90px;
-    border-radius: 60px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-    max-width: 900px;
-    margin: auto;
-  "
->
-    <h3 style="margin-top: 0; color: white; font-size: 28px; text-align: center;">Send Us A Message</h3>
-
+      style="
+        flex: 1 1 450px;
+        background: #1f1f1f;
+        padding: 30px;
+        border-radius: 16px;
+      "
+    >
+      <h3 style="margin-top: 0; font-size: 26px; color: white ">Send Us A Message</h3>
 
       <!-- ✅ Thank You Message -->
       <div
         id="thankYouMessage"
-        style="display: none; color: #00ffcc; margin-bottom: 15px; text-align: center;"
+        style="display: none; font-size: 26px; color: #00ffcc; margin-bottom: 15px; text-align: center;"
       >
         ✅ Thank you for contacting us! We'll get back to you shortly.
       </div>
@@ -598,10 +601,11 @@ Our mission is simple — to make your paperwork stress-free and trustworthy.<br
           required
           style="
             width: 100%;
-            padding: 40px;
-            margin-bottom: 10px;
-            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 16px;
+            border-radius: 12px;
             border: none;
+            font-size: 25px;
           "
         />
         <input
@@ -610,22 +614,24 @@ Our mission is simple — to make your paperwork stress-free and trustworthy.<br
           required
           style="
             width: 100%;
-            padding: 42px;
-            margin-bottom: 10px;
+            padding: 12px;
+            margin-bottom: 16px;
             border-radius: 8px;
             border: none;
+            font-size: 26px;
           "
         />
         <textarea
           placeholder="Your Message"
-          rows="6"
+          rows="5"
           required
           style="
             width: 100%;
-            padding: 44px;
-            margin-bottom: 110px;
-            border-radius: 10px;
+            padding: 12px;
+            margin-bottom: 16px;
+            border-radius: 8px;
             border: none;
+            font-size: 26px;
           "
         ></textarea>
         <button
@@ -633,10 +639,11 @@ Our mission is simple — to make your paperwork stress-free and trustworthy.<br
           style="
             background-color: #00ffcc;
             color: black;
-            padding: 15px 100px;
+            padding: 12px 25px;
             border: none;
-            border-radius: 100px;
+            border-radius: 8px;
             cursor: pointer;
+            font-size: 26px;
           "
         >
           Send Message
@@ -645,11 +652,11 @@ Our mission is simple — to make your paperwork stress-free and trustworthy.<br
     </div>
 
     <!-- Google Map -->
-    <div style="flex: 1 1 550px; overflow: hidden; border-radius: 18px">
+    <div style="flex: 1 1 450px; overflow: hidden; border-radius: 16px">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.8254288350263!2d76.2508920749092!3d20.348829210784807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bda100bfbdebbc9%3A0xd123af58c2d138bd!2sShree%20Renuka%20Mata%20Mandir!5e0!3m2!1sen!2sin!4v1753961168420!5m2!1sen!2sin"
         width="100%"
-        height="600px"
+        height="400"
         style="border: 0"
         allowfullscreen=""
         loading="lazy"
@@ -677,4 +684,3 @@ Our mission is simple — to make your paperwork stress-free and trustworthy.<br
     </footer>
   </body>
 </html>
-
